@@ -1,0 +1,11 @@
+checks:
+  - id: must_follow_template
+    desc: 必须保留模板所有一级/二级标题；输出为 Markdown 且不加代码块围栏
+  - id: numbers_consistent
+    desc: 总体概览中的 total/done/doing/blocked/todo/overdue 必须与输入 KPIs 一致
+  - id: no_fabrication
+    desc: 不得编造项目/里程碑/指标；缺失信息用“待补充”
+  - id: risk_section_present
+    desc: 必须输出 Top 风险/阻塞 3-5 条，并包含 影响/原因/建议/Owner
+  - id: actionability
+    desc: 下周行动项必须包含 动作 + Owner + 截止日期（缺则待补充）
