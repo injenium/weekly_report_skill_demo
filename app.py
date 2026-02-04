@@ -3,7 +3,8 @@ import json
 from datetime import datetime
 import streamlit as st
 import pandas as pd
-
+st.write("RUNNING FROM:", os.path.abspath(__file__))
+st.write("LAST MOD:", os.path.getmtime(__file__))
 from tools import (
     read_table,
     normalize_columns,
@@ -59,7 +60,7 @@ if file is not None:
 with colR:
     st.subheader("2) 生成周报")
     default_prompt = "给我生成本周项目周报：总体进度、里程碑、Top 风险、按负责人统计、下周行动清单（按公司模板输出）。"
-    user_request = st.text_area("领导一句话（自然语言）", value=default_prompt, height=120)
+    user_request = st.text_area("自然语言", value=default_prompt, height=120)
 
     gen = st.button("🚀 生成周报", type="primary", disabled=(df is None))
 
@@ -116,5 +117,5 @@ with colR:
 # ---- Trace ----
 if show_trace:
     st.divider()
-    st.subheader("执行轨迹（让领导一眼懂 Skills 的关键）")
+    st.subheader("执行轨迹")
     st.code("\n".join([f"- {x}" for x in trace]) if trace else "- （等待操作）")
