@@ -25,7 +25,3 @@ streamlit run app.py
 2. 左侧选择 Skill：None / weekly_report
 3. 点击“生成周报”对比效果
 
-## 5) 数据列建议
-project / module / task / owner / status / priority / due_date / progress / blocker / risk
-
-如果你列名不同，tools.normalize_columns() 会做一些常见映射。
