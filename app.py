@@ -53,7 +53,7 @@ if file is not None:
 
     with colL:
         st.write("数据预览（前 50 行）")
-        st.dataframe(df.head(50), use_container_width=True)
+        st.dataframe(df.head(50), width=True)
 
 # ---- Generate report ----
 with colR:
